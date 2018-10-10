@@ -3,12 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const mongoose = require("mongoose");
 var botRouter = require('./routes/bot');
 
 
 var app = express();
-
+mongoose.connect("mongodb://localhost:27017/fishebonne");
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
