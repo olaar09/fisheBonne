@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let botController = require('../controllers/botController');
 
-/* GET home page. */
+/* bot router */
 router.post('/bot', botController);
 
 module.exports = router;
