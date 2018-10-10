@@ -17,8 +17,16 @@ const isCorrectFormat = breakQuest => {
 
     if (breakQuest && breakQuest.length ===4) {
         let  [notUsed, commandString, quantity] = breakQuest;
-        return commandString === 'buy' && Number.isInteger(parseInt(quantity))
+
+        // run through possible command and validate format for the selected command
+        switch (commandString){
+            case 'buy':
+                return commandString === 'buy' && Number.isInteger(parseInt(quantity));
+            default:
+                return false;
+        }
     }
+
     return false;
 };
 
