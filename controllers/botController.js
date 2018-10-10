@@ -3,7 +3,7 @@ const replyFirstQuestion = (req, res, next)=>{
 
     if (isCorrectFormat(breakQuest)) {
         let [empty, commandString, quantity, phone] = breakQuest;
-        let response  = `Do you want to buy ${quantity} units of token with the phone number ${phone.substring(0, phone.length - 1)}?`;
+        let response  = `Do you want to buy ${quantity} units of token with the phone number ${phone.substring(0, phone.length - 1)} ?`;
         return res.send(response);
     }
     return res.send("I didnt understand your message, Please try again");
